@@ -9,11 +9,13 @@ To use this library yourself, use the "Template" button as described below.
 
 ## 1. Create a template for yourself
 
-## 2. Change the name
+## 2. Change the name (search on app-lib-py or app_lib_py)
 - in the yml files in pydoctor line 24
 - docker yml line 26
+- pypi yml line 43
 
-
+## 2. Setup development environments
+See [dev environments](dev.md)
 
 ## 3. Change the tokens
 
