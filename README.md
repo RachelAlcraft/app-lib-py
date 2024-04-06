@@ -21,6 +21,7 @@ See [dev environments](dev.md)
 https://pre-commit.com/
 Run it to check
 `pre-commit run --all-files`
+`ruff --target-version=py311 --line-length 79 . --fix`
 
 ## 4. Change the tokens
 
