@@ -20,4 +20,4 @@ jobs:
           ruff --target-version=py311 --line-length 88 .
       - name: Style check with black
         run: |
-          black ./ --check --line-length 88
+          black ./ --check --line-length 88 --diff

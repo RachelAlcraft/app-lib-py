@@ -6,7 +6,7 @@
 
 ## STREAMLIT APP
 ```
-python3 -m venv .env-app
+/usr/bin/python3.12 -m venv .env-app
 ## Load dev environment
 source .env-app/bin/activate
 (deactivate to exit venv)
@@ -24,7 +24,7 @@ https://share.streamlit.io/
 ## Pypi library
 ```
 cd lib
-python3 -m venv .env-lib
+/usr/bin/python3.12 -m venv .env-lib
 ## Load dev environment
 source .env-lib/bin/activate
 (deactivate to exit venv)

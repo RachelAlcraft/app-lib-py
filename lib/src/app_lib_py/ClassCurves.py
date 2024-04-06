@@ -1,6 +1,7 @@
 """
 Class for different kinds of curves with an abstract base class Curve
 """
+
 from abc import ABC, abstractmethod
 import math
 
