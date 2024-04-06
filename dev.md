@@ -18,7 +18,7 @@ pip install -r requirements.txt --upgrade
 streamlit run app/home.py
 
 ## distribute to streamlit
-This will be automatically distributed to streamlit on push to main  
+This will be automatically distributed to streamlit on push to main
 https://share.streamlit.io/
 
 ## Pypi library
@@ -32,12 +32,10 @@ pip install --upgrade pip
 pip install -r requirements.txt --upgrade
 ```
 
----  
+---
 
 # Debugging
 
 ## A python file
 
 ## The streamlit app
-
-

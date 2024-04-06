@@ -1,3 +1,5 @@
 ruff
 black
 pytest
+numpy
+pre-commit

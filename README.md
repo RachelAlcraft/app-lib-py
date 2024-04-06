@@ -19,6 +19,8 @@ See [dev environments](dev.md)
 
 ## 3. Setup precommit hooks
 https://pre-commit.com/
+Run it to check
+`pre-commit run --all-files`
 
 ## 4. Change the tokens
 
