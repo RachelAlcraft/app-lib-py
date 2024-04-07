@@ -22,9 +22,9 @@ https://pre-commit.com/
 Run it to check
 `pre-commit run --all-files`
 `ruff --target-version=py311 --line-length 88 . --fix`
-`black ./ --check --line-length 88`
+`black ./ --check --line-length 88 --diff`
 
-## 4. Change the tokens
+## 4. Change the tokens, get all workflows in github actions working
 
 ## 5. Test driven development, design the functionality
 

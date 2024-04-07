@@ -21,7 +21,7 @@ jobs:
 
     - name: Generate API documentation with pydoctor
       run: |
-        pydoctor --make-html --html-output=./apidocs lib/src/app_lib_py
+        pydoctor --make-html --html-output=./docs/api lib/src/app_lib_py
     - name: Push API documentation to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
