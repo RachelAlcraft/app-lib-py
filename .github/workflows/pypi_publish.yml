@@ -18,8 +18,7 @@ jobs:
 
     - name: Install pypa/build
       run: >-
-        cd lib
-        python3 -m pip install build
+        python3 -m pip install build ./lib
     - name: Build a binary wheel and a source tarball
       run: python3 -m build
     - name: Store the distribution packages
