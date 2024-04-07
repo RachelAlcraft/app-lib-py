@@ -35,9 +35,21 @@ pydoctor --make-html --html-output=./docs/api lib/src/app_lib_py --theme readthe
 ## 7. Distribute and deploy
 
 ### 7a. Pypi
-Follow these instructions for creating a token in pypi and adding it to the github repo: https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/
-https://github.com/marketplace/actions/modify-file-content
+Tokens are needed from pypi and from github. Follow these instructions: [pypi gha](https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/)
+
+To release to pypi you need to either:
+- Create a release in github, the tag will be the version number of the library
+- Or if it is only a minor incremebt, you can run the workflow in Actions [Create a new patch release](https://github.com/RachelAlcraft/app-lib-py/actions/workflows/release.yml). This will increment the minor version and release.
+
 
 ### 7b. Streamlit
+Streamlit will be automatically deployed when the main branch is updated after the link with streamlit is made.
+1. Create an account with [streamlit io](https://streamlit.io/)
+2. Go to the [deploy](https://share.streamlit.io/deploy)
+3. Choose your repo: RachelAlcraft/app-lib-py
+4. Choose Branch: Main
+5. Choose entry file: app/home.py
+6. Amend the domain to your liking [app-lib-py](https://app-lib-py.streamlit.app/)
+7. Press deploy
 
 ### 7c. Docker
