@@ -23,13 +23,12 @@ https://share.streamlit.io/
 
 ## Pypi library
 ```
-cd lib
 /usr/bin/python3.12 -m venv .env-lib
 ## Load dev environment
 source .env-lib/bin/activate
 (deactivate to exit venv)
 pip install --upgrade pip
-pip install -r requirements.txt --upgrade
+pip install -r requirements_lib.txt --upgrade
 ```
 
 ---

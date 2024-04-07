@@ -6,21 +6,13 @@ jobs:
   pypi:
     runs-on: ubuntu-latest
     steps:
-      - name: Modify version
-        uses: jaywcjlove/github-action-modify-file-content@main
-        with:
-          path: lib/setup.cfg
-          body: "{{github.ref_name}}"
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - run: |
           python3 -m pip install --upgrade build
-          cd lib
           python3 -m build
-          mkdir ../dist
-          cp -r dist/*  "../dist/*"
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
