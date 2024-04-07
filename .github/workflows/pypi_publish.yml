@@ -18,9 +18,9 @@ jobs:
 
     - name: Install pypa/build
       run: >-
-        python3 -m pip install build ./lib
+        python3 -m pip install build
     - name: Build a binary wheel and a source tarball
-      run: python3 -m build
+      run: python3 -m build ./lib
     - name: Store the distribution packages
       uses: actions/upload-artifact@v3
       with:
