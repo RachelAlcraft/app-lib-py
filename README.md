@@ -35,7 +35,7 @@ pydoctor --make-html --html-output=./docs/api lib/src/app_lib_py --theme readthe
 ## 7. Distribute and deploy
 
 ### 7a. Pypi
-https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/
+Follow these instructions for creating a token in pypi and adding it to the github repo: https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/
 
 ### 7b. Streamlit
 
