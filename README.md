@@ -36,6 +36,7 @@ pydoctor --make-html --html-output=./docs/api lib/src/app_lib_py --theme readthe
 
 ### 7a. Pypi
 Follow these instructions for creating a token in pypi and adding it to the github repo: https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/
+https://github.com/marketplace/actions/modify-file-content
 
 ### 7b. Streamlit
 
