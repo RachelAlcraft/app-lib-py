@@ -28,7 +28,7 @@ Run it to check
 
 pydoctor --make-html --html-output=./docs/api lib/src/app_lib_py --theme readthedocs
 
-For pydoctor, you need the setting Actions/General/Allow GitHib Actions to create and approve pull requests checked
+For pydoctor, you need the setting Actions/General/Allow GitHib Actions to create and approve pull requests checked.  Turn on gh-pages in the settings to be published from the branch gh-pages.
 
 ## 5. Test driven development, design the functionality
 
