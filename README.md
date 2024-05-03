@@ -28,6 +28,8 @@ Run it to check
 
 pydoctor --make-html --html-output=./docs/api lib/src/app_lib_py --theme readthedocs
 
+For pydoctor, you need the setting Actions/General/Allow GitHib Actions to create and approve pull requests checked
+
 ## 5. Test driven development, design the functionality
 
 ## 6. Implement
