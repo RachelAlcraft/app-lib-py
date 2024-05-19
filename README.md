@@ -43,6 +43,8 @@ Then re-run the failed action.  This should create the branch gh-actions.
 
 Now in order to activate it you must go to your github settings/pages and choose deply from a branch, and then gh-pages and root. An action will be triggered automatically to build the pages, with the link at: https://rachelalcraft.github.io/your-repo/
 
+For pydoctor, you need the setting Actions/General/Allow GitHib Actions to create and approve pull requests checked.  Turn on gh-pages in the settings to be published from the branch gh-pages.
+
 ## 5. Test driven development, design the functionality
 
 ## 6. Implement
