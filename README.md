@@ -9,10 +9,11 @@ To use this library yourself, use the "Template" button as described below.
 
 ## 1. Create a template for yourself
 
-## 2. Change the name (search on app-lib-py or app_lib_py)
-- in the yml files in pydoctor line 24
+## 2. Change the default name
+Primarily do this by searching on app-lib-py and app_lib_py, don't forget there is a directory to change too. Examples of changes are:
+- in the yml files (/.github/workflows/) in pydoctor line 24
 - docker yml line 26
-- pypi yml line 43
+- pypi's publish.yml line 43
 
 ## 2. Setup development environments
 See [dev environments](dev.md)
@@ -24,9 +25,23 @@ Run it to check
 `ruff --target-version=py311 --line-length 88 . --fix`
 `black ./ --check --line-length 88 --diff`
 
-## 4. Change the tokens, get all workflows in github actions working
+## 4. PyDoctor automatic documentaion
 
-pydoctor --make-html --html-output=./docs/api lib/src/app_lib_py --theme readthedocs
+The documentation is generated with the workflow pydoctor.yml.
+The branch gh-pages will be created after your first commit to main, and will fail the first time.
+
+
+The branch gh-pages will be created after your first commit to main, and will fail the first time, so re-run the action
+from github actions on your github after you have done your first commit.
+
+The pydoctor command does not need to be run locally (installing if you want to, and add the created files to .gitignore:
+```pydoctor --make-html --html-output=./docs/api lib/src/app_lib_py --theme readthedocs```
+Permissions need to be added so that the action has the appropriate permissions to be run.
+In repo/settings/Actions at the bottom give Read and Write permissions to Workflow and Allow github to create and approve pull requests.
+
+Then re-run the failed action.  This should create the branch gh-actions.
+
+Now in order to activate it you must go to your github settings/pages and choose deply from a branch, and then gh-pages and root. An action will be triggered automatically to build the pages, with the link at: https://rachelalcraft.github.io/your-repo/
 
 ## 5. Test driven development, design the functionality
 
@@ -35,8 +50,9 @@ pydoctor --make-html --html-output=./docs/api lib/src/app_lib_py --theme readthe
 ## 7. Distribute and deploy
 
 ### 7a. Pypi
-Tokens are needed from pypi and from github. Follow these instructions: [pypi gha](https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/)
+Tokens are needed from pypi and from github. You create a token in pypi, and then add it in github/secrets and variables/Actions with the name PYPI_API_TOKEN. Follow these instructions: [pypi gha token](https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/#create-a-pypi-api-token)
 
+You will need to create a 0.01 or some such release to get the workflow going and test it.
 To release to pypi you need to either:
 - Create a release in github, the tag will be the version number of the library
 - Or if it is only a minor incremebt, you can run the workflow in Actions [Create a new patch release](https://github.com/RachelAlcraft/app-lib-py/actions/workflows/release.yml). This will increment the minor version and release.
@@ -53,3 +69,8 @@ Streamlit will be automatically deployed when the main branch is updated after t
 7. Press deploy
 
 ### 7c. Docker
+The application can also be added to docker for self hosting. API tokens need to be added.
+1. First create an api token in docker/My Account/Security/Access Tokens
+2. In github/Settings/Secrets and Variables/Actions
+  - add the copied token as a secret with the name DOCKERHUB_TOKEN
+  - add your docker user name with the name DOCKERHUB_USERNAME
