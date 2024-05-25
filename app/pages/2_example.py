@@ -35,8 +35,8 @@ with tabCode:
         intc = int(random.random() * 100)
         sq = cc.Quadratic(inta, intb, intc)
         ys = sq.get_ys([0, 1, 2, 3])
-        st.write(f"y={inta}x^2 + {intb}x + {intc}")
-        st.write(f"0,1,2,3={ys}")
+        print(f"y={inta}x^2 + {intb}x + {intc}")
+        print(f"0,1,2,3={ys}")
 
         """
     )

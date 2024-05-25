@@ -1,5 +1,7 @@
 # app-lib-py
 
+Hosted at: [streamlit:app-lib-py](https://app-lib-py.streamlit.app/)
+
 This template is a suggestion of good practice for a scientific python library that includes continuous integration and conntinuous development and continuous documentation.
 The application is demonstrated though streamlist which is deployed with continuous deployment, and also made a available via pypi as a python library with `pip install`
 
@@ -8,6 +10,7 @@ The single github repo contains 2 seperate software artefacts, a python library 
 To use this library yourself, use the "Template" button as described below.
 
 ## 1. Create a template for yourself
+The template can be downloaded from github at [app-lib-py](https://github.com/RachelAlcraft/app-lib-py). Once using the template and giving your own name and repo, you will need to make some changes to the files.
 
 ## 2. Change the default name
 Primarily do this by searching on app-lib-py and app_lib_py, don't forget there is a directory to change too. Examples of changes are:
@@ -46,10 +49,10 @@ Now in order to activate it you must go to your github settings/pages and choose
 For pydoctor, you need the setting Actions/General/Allow GitHib Actions to create and approve pull requests checked.  Turn on gh-pages in the settings to be published from the branch gh-pages.
 
 ## 5. Test driven development, design the functionality
-Write the tests in science, speed and utility before you write the functional implementation.
+Write the tests in **science**, **speed** and **utility** before you write the functional implementation.
 
 ## 6. Implement
-The src/app_lib_py directory is the place to write the functional code for the library. This will become available on pypi as a pit install.
+The src/app_lib_py directory is the place to write the functional code for the library. This will become available on pypi as a `pip install`.
 
 ## 7. Distribute and deploy
 The github actions automate the distribtion to pypi, test running, and docker.
