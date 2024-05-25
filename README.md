@@ -46,10 +46,14 @@ Now in order to activate it you must go to your github settings/pages and choose
 For pydoctor, you need the setting Actions/General/Allow GitHib Actions to create and approve pull requests checked.  Turn on gh-pages in the settings to be published from the branch gh-pages.
 
 ## 5. Test driven development, design the functionality
+Write the tests in science, speed and utility before you write the functional implementation.
 
 ## 6. Implement
+The src/app_lib_py directory is the place to write the functional code for the library. This will become available on pypi as a pit install.
 
 ## 7. Distribute and deploy
+The github actions automate the distribtion to pypi, test running, and docker.
+If you choose to distribute on streamlit this will be automated by checkin to main.
 
 ### 7a. Pypi
 Tokens are needed from pypi and from github. You create a token in pypi, and then add it in github/secrets and variables/Actions with the name PYPI_API_TOKEN. Follow these instructions: [pypi gha token](https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/#create-a-pypi-api-token)
